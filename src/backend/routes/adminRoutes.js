@@ -14,7 +14,10 @@ router.post('/login', adminUserController.login);
 
 
 // Rotas Protegidas (Requer Autenticação de Admin)
-router.use(adminMiddleware.verifyAdminToken); // Tudo abaixo disso exige login de admin
+// ----------------------------------------------------------------------
+// LINHA CORRIGIDA: Agora usa 'requireAdminAuth', que é o nome correto da função
+router.use(adminMiddleware.requireAdminAuth); // Tudo abaixo disso exige login de admin
+// ----------------------------------------------------------------------
 
 // Rota do Dashboard
 router.get('/dashboard', adminUserController.getDashboardStats);
