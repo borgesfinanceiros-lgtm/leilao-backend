@@ -2,7 +2,7 @@
 
 // ------------------------------------------------------------------------------------------
 // CORREÇÃO FINAL: Usando 'User' com U maiúsculo para coincidir com o nome do arquivo 'User.js' no GitHub.
-const UserModel = require('../models/User'); 
+const UserModel = require('../models/Client'); 
 // ------------------------------------------------------------------------------------------
 
 const authService = require('../services/authService'); 
