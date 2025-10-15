@@ -30,7 +30,7 @@ router.get('/lots/:loteId/bids', bidController.getLotBids); // Histórico de Lan
 // ROTAS PROTEGIDAS (REQUEREM LOGIN DO CLIENTE)
 // =======================================================
 
-router.use(authMiddleware.verifyClientToken); // Tudo abaixo disso exige login de cliente
+router.use(authMiddleware.requireUserAuth); // Tudo abaixo disso exige login de cliente
 
 // Perfil/Usuário
 router.get('/profile', UserController.getProfile); 
@@ -41,6 +41,7 @@ router.post('/kyc/upload', uploadKYC.single('documento'), kycClientController.up
 
 // Lances
 router.post('/bids', bidController.placeBid); // Fazer um novo lance
+
 
 
 module.exports = router;
