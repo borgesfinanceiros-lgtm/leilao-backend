@@ -1,6 +1,12 @@
 // src/backend/controllers/userController.js
 
-const UserModel = require('../models/User');
+// ------------------------------------------------------------------------------------------
+// LINHA CORRIGIDA: O nome do arquivo no sistema Linux (Render) é sensível a maiúsculas/minúsculas.
+// Assumindo que o arquivo real se chama 'user.js' ou 'User.js' (com U maiúsculo).
+// O log indicou que ele não encontrava '../models/User'. Vamos tentar o caminho mais provável (minúsculo).
+const UserModel = require('../models/user'); 
+// ------------------------------------------------------------------------------------------
+
 const authService = require('../services/authService'); 
 
 /** [PUBLIC] Registra um novo usuário (licitante). */
